@@ -6,7 +6,9 @@ const User = require("./models/User");
 const expenseRouter = require("./routes/Expenses");
 const todoRouter = require("./routes/Todo");
 require("dotenv").config();
-const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID);
+const client = new OAuth2Client(
+  "519123054158-2aqrqkf3qljnqlpdjvgbft1q893h18pi.apps.googleusercontent.com"
+);
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -45,7 +47,8 @@ app.post("/api/google-login", async (req, res) => {
   res.json({ name, email, picture });
 });
 
-const uri = process.env.ATLAS_URI;
+const uri =
+  "mongodb+srv://rahash:rahash@trackio.qmrzk.mongodb.net/Trackio?retryWrites=true&w=majority";
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
