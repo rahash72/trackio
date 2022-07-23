@@ -14,7 +14,10 @@ router.post("/new", (req, res) => {
     category: req.body.category,
     bookmark: false,
   });
-  expense.save().then(res.send({ message: "Expense Added" }));
+  expense
+    .save()
+    .then(res.send({ message: "Expense Added" }))
+    .catch((err) => res.send(err));
 });
 
 router.post("/newRecurring", (req, res) => {
