@@ -35,7 +35,9 @@ const LoginPage = () => {
         <h1 className="heading">Trackio</h1>
         <div className="login">
           <GoogleLogin
-            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+            clientId={
+              "519123054158-2aqrqkf3qljnqlpdjvgbft1q893h18pi.apps.googleusercontent.com"
+            }
             buttonText="Log in with Google"
             onSuccess={handleLogin}
             onFailure={handleFailure}
