@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [loginData, setLoginData] = useContext(UserContext);
 
   const handleFailure = (result) => {
-    toast.error("Error");
+    toast.error(result);
   };
 
   const handleLogin = async (googleData) => {
@@ -35,9 +35,7 @@ const LoginPage = () => {
         <h1 className="heading">Trackio</h1>
         <div className="login">
           <GoogleLogin
-            clientId={
-              "519123054158-2aqrqkf3qljnqlpdjvgbft1q893h18pi.apps.googleusercontent.com"
-            }
+            clientId="519123054158-2aqrqkf3qljnqlpdjvgbft1q893h18pi.apps.googleusercontent.com"
             buttonText="Log in with Google"
             onSuccess={handleLogin}
             onFailure={handleFailure}
