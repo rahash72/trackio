@@ -67,5 +67,6 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "^7.0.1"
-  }
+  },
+  "homepage": "https://github.com/rahash72/trackio#readme"
 }
