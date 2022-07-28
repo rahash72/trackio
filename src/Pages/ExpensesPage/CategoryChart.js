@@ -125,6 +125,7 @@ const CategoryChart = () => {
   return (
     <div
       style={{
+        maxWidth: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
