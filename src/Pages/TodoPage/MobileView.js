@@ -22,7 +22,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -73,18 +73,13 @@ export default function MobileView() {
           <Tab label="Chart" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <Adding />
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <Chart />
-        </TabPanel>
-      </SwipeableViews>
+
+      <TabPanel value={value} index={0} dir={theme.direction}>
+        <Adding />
+      </TabPanel>
+      <TabPanel value={value} index={1} dir={theme.direction}>
+        <Chart />
+      </TabPanel>
     </Box>
   );
 }

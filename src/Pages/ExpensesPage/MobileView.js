@@ -25,7 +25,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -76,7 +76,6 @@ export default function MobileView() {
           <Tab label="Chart" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
-
       <TabPanel value={value} index={0} dir={theme.direction}>
         <Adding />
       </TabPanel>
